@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.3.0
+services:
+  - postgresql
+env:
+  matrix:
+  - TEST_DIRECTORY=spec/models
+  - TEST_DIRECTORY=spec/features
+  - TEST_DIRECTORY=spec/controllers
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+script:
+- xvfb-run bundle exec rspec $TEST_DIRECTORY
+cache: bundler
+sudo: false
