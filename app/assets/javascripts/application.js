@@ -30,7 +30,23 @@ $(document).ready(function(){
   var path = d3.geoPath()
       .projection(projection);
 
-  function draw_iss(data){
+  function getCoordinates(){ $.getJSON("http://api.open-notify.org/iss-now.json", function(data) {
+    var x = data["iss_position"]["longitude"];
+    var y = data["iss_position"]["latitude"];
+    console.log(x,y);
+    drawIss([x,y]);
+    }).done(function() {
+      console.log("success")
+    }).fail(function() {
+      console.log("error")
+    }).always(function() {
+      setTimeout(function() {
+        svg.selectAll("circle").remove();
+        getCoordinates()}, 5000);
+    });
+  };
+
+  function drawIss(data){
     svg.selectAll("circle")
     	.data(data)
     	.enter()
@@ -43,7 +59,8 @@ $(document).ready(function(){
     	})
     	.attr("r", "8px")
     		.style("fill", "$dandelion")
-    		.style("opacity", 0.85)
+    		.style("opacity", 0.85);
+        console.log("drew ISS", data)
   };
 
   d3.json("https://gist.githubusercontent.com/abenrob/787723ca91772591b47e/raw/8a7f176072d508218e120773943b595c998991be/world-50m.json", function(error, world) {
@@ -61,10 +78,6 @@ $(document).ready(function(){
         .attr("d", path);
   });
 
-  $.getJSON("http://api.open-notify.org/iss-now.json", function(data) {
-    var x = data["iss_position"]["longitude"];
-    var y = data["iss_position"]["latitude"];
-    console.log(x,y);
-    draw_iss([x,y]);
-  });
+  getCoordinates();
+
 });
