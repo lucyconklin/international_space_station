@@ -20,32 +20,22 @@ g.boundary {
   stroke-alignment: inside;
 }
 
-.graticule {
-  fill: none;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-.graticule :nth-child(2n) {
-  stroke-dasharray: 2,2;
-}
-
 #header {
   background-color: #142448;
-  height:60px;
+  padding: 25px;
 }
 
 #enter-zipcode {
   background-color: dogerblue;
-  height:80px;
+  padding: 25px;
 }
 
 #next-passover {
   background-color: steelblue;
-  height:80px;
+  padding: 25px;
 }
 
 #send-text {
   background-color: dogerblue;
-  height:80px;
+  padding: 25px;
 }
