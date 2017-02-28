@@ -16,6 +16,7 @@
 //= require_tree .
 
 $(document).ready(function(){
+
   var width = 1280,
       height = 640;
 
@@ -30,7 +31,7 @@ $(document).ready(function(){
   var path = d3.geoPath()
       .projection(projection);
 
-  function getCoordinates(){ $.getJSON("http://api.open-notify.org/iss-now.json", function(data) {
+  function getCoordinates(){ $.getJSON("/api/v1/iss-position", function(data) {
     var x = data["iss_position"]["longitude"];
     var y = data["iss_position"]["latitude"];
     console.log(x,y);
