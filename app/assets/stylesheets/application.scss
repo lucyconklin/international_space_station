@@ -1,1 +1,160 @@
-@import "manifest";
+// variables
+$jordy-blue:    #80ABD9;
+$danube:        #688CC4;
+$chetwode-blue: #5572B3;
+$blue-zodiac:   #142448;
+$big-stone:     #111E3A;
+$dandelion:     #FFDC6A;
+$kepple:        #43A49B;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,500,700');
+$header-font: 'Raleway', sans-serif;
+$body-font: 'Raleway', sans-serif;
+
+.white {
+  color: white;
+}
+
+.dandelion {
+  color: $dandelion;
+}
+
+// typography
+h1 {
+  font-family: $header-font;
+  font-size: 36px;
+  color: $jordy-blue;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $header-font;
+  font-size: 26px;
+  font-weight: 200;
+}
+
+#enter-zipcode form h3 {
+  color: $jordy-blue;
+  display: inline-block;
+}
+
+#send-text form h3 {
+  color: $jordy-blue;
+  display: inline-block;
+}
+
+#next-passover h3 {
+  color: $jordy-blue;
+  display: inline-block;
+}
+
+section.footer p {
+  font-family: $body-font;
+  font-size: 14px;
+  text-align: center;
+}
+// frame
+body {
+  background-color: #142448;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+	background-color: #5572B3;
+}
+
+g.land {
+  fill: #688CC4;
+  stroke: #80ABD9;
+  stroke-alignment: inside;
+}
+
+g.boundary {
+  fill: none;
+  stroke: rgba(255,255,255,0.25);
+  stroke-alignment: inside;
+}
+
+#header {
+  background-color: #142448;
+  padding: 25px;
+}
+
+#enter-zipcode {
+  background-color: dogerblue;
+  padding: 25px;
+}
+
+#next-passover {
+  background-color: $big-stone;
+  padding: 25px;
+}
+
+#send-text {
+  background-color: dogerblue;
+  padding: 25px;
+}
+
+section.footer {
+  background-color: $big-stone;
+  padding-top: 80px;
+  height: 100px;
+  color: $danube;
+}
+
+// form
+input[type="text"] {
+  background-color: $blue-zodiac;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px $chetwode-blue;
+  transition: border 0.3s;
+  color: $kepple;
+  display: inline-block;
+  margin: 0;
+  width: 150px;
+  font-family: $header-font;
+  font-size: 23px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+
+input[type="text"].phone-number {
+  width: 220px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $chetwode-blue;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $chetwode-blue;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $chetwode-blue;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $chetwode-blue;
+}
+
+// ISS
+circle {
+  fill: $dandelion;
+  z-index: 999;
+  transform-origin: 8px 8px;
+  -webkit-transform-origin: 50% 50%;
+}
