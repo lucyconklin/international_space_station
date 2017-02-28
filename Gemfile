@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'd3-rails'
 gem 'faraday'
+gem 'geocoder'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
