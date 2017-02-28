@@ -5,15 +5,20 @@
 <div id="enter-zipcode">
 	<form>
 		<h3>Enter your zipcode to find out when you can see the ISS</h3>
-		<input placeholder="your zipcode"></input>
+		<input type="text" placeholder="your zipcode">
 	</form>
 </div>
 <div id="next-passover">
-	<h3>Your next chance to view the International Space Station is:</h3>
+	<h3>Your next chance to view the International Space Station is:
+	<span class="white"><%= @date_of_next_passover %></span>
+	</h3>
 </div>
 <div id="send-text">
 	<form class="text-form">
-		<h3>Enter your phone number to receive a text:</h3>
-		<input placeholder="your phone number" class="phone-number"></input>
+		<h3>Enter your phone number to receive a text</h3>
+		<input placeholder="your phone number" class="phone-number" type="text">
 	</form>
 </div>
+<section class="footer">
+	<p>&copy; 2017 Lucy Conklin</p>
+</section>

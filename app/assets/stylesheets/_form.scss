@@ -1,6 +1,45 @@
-input {
+input[type="text"] {
+  background-color: $blue-zodiac;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px $chetwode-blue;
+  transition: border 0.3s;
+  color: $kepple;
   display: inline-block;
-  background-color: none;
-  border-bottom: 2px solid $jordy-blue;
+  margin: 0;
+  width: 150px;
+  font-family: $header-font;
+  font-size: 23px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+
+input[type="text"].phone-number {
+  width: 220px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $chetwode-blue;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $chetwode-blue;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $chetwode-blue;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $chetwode-blue;
 }

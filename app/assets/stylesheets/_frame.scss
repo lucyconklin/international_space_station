@@ -31,11 +31,18 @@ g.boundary {
 }
 
 #next-passover {
-  background-color: steelblue;
+  background-color: $big-stone;
   padding: 25px;
 }
 
 #send-text {
   background-color: dogerblue;
   padding: 25px;
+}
+
+section.footer {
+  background-color: $big-stone;
+  padding-top: 80px;
+  height: 100px;
+  color: $danube;
 }
