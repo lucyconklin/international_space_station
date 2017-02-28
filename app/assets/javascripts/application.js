@@ -58,9 +58,10 @@ $(document).ready(function(){
     		return projection(data)[1];
     	})
     	.attr("r", "8px")
-    		.style("fill", "$dandelion")
-    		.style("opacity", 0.85);
-        console.log("drew ISS", data)
+      .transition()
+      .duration(7000)
+      .style("fill-opacity", 0)
+      // .remove()
   };
 
   d3.json("https://gist.githubusercontent.com/abenrob/787723ca91772591b47e/raw/8a7f176072d508218e120773943b595c998991be/world-50m.json", function(error, world) {

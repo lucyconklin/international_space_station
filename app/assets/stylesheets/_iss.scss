@@ -1,4 +1,6 @@
 circle {
-  z-index: 0;
   fill: $dandelion;
+  z-index: 999;
+  transform-origin: 8px 8px;
+  -webkit-transform-origin: 50% 50%;
 }
