@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,500,700");
+/* line 14, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+.white {
+  color: white;
+}
+
+/* line 18, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+.dandelion {
+  color: #FFDC6A;
+}
+
+/* line 23, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  color: #80ABD9;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 31, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 200;
+}
+
+/* line 37, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#enter-zipcode form h3 {
+  color: #80ABD9;
+  display: inline-block;
+}
+
+/* line 42, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#send-text form h3 {
+  color: #80ABD9;
+  display: inline-block;
+}
+
+/* line 47, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#next-passover h3 {
+  color: #80ABD9;
+  display: inline-block;
+}
+
+/* line 52, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+section.footer p {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 58, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+body {
+  background-color: #142448;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 64, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+svg {
+  background-color: #5572B3;
+}
+
+/* line 68, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+g.land {
+  fill: #688CC4;
+  stroke: #80ABD9;
+  stroke-alignment: inside;
+}
+
+/* line 74, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+g.boundary {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-alignment: inside;
+}
+
+/* line 80, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#header {
+  background-color: #142448;
+  padding: 25px;
+}
+
+/* line 85, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#enter-zipcode {
+  background-color: dogerblue;
+  padding: 25px;
+}
+
+/* line 90, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#next-passover {
+  background-color: #111E3A;
+  padding: 25px;
+}
+
+/* line 95, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+#send-text {
+  background-color: dogerblue;
+  padding: 25px;
+}
+
+/* line 100, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+section.footer {
+  background-color: #111E3A;
+  padding-top: 80px;
+  height: 100px;
+  color: #688CC4;
+}
+
+/* line 108, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+input[type="text"] {
+  background-color: #142448;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #5572B3;
+  transition: border 0.3s;
+  color: #43A49B;
+  display: inline-block;
+  margin: 0;
+  width: 150px;
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+
+/* line 133, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+input[type="text"].phone-number {
+  width: 220px;
+}
+
+/* line 137, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* line 141, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #5572B3;
+}
+
+/* line 144, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5572B3;
+}
+
+/* line 147, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #5572B3;
+}
+
+/* line 150, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #5572B3;
+}
+
+/* line 155, /Users/Lucy/turing/3module/projects/international_space_station/app/assets/stylesheets/application.scss */
+circle {
+  fill: #FFDC6A;
+  z-index: 999;
+  transform-origin: 8px 8px;
+  -webkit-transform-origin: 50% 50%;
+}
