@@ -14,7 +14,7 @@ describe "ISS position API" do
 
     position = JSON.parse(response.body)
 
-    expect(position["iss_position"]["latitude"]).to eq(@latitude)
-    expect(position["iss_position"]["longitude"]).to eq(@longitude)
+    expect(position["iss_position"]["latitude"].to_i).to eq(@latitude.to_i)
+    expect(position["iss_position"]["longitude"].to_i).to eq(@longitude.to_i)
   end
 end
