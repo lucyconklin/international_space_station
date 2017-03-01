@@ -13,3 +13,8 @@ module InternationalSpaceStation
     end
   end
 end
+
+Timezone::Lookup.config(:geonames) do |c|
+  c.username = 'lucyconklin'
+  c.offset_etc_zones = true
+end

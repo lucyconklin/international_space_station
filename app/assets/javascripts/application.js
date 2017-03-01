@@ -102,14 +102,14 @@ $(document).ready(function(){
         method: "GET",
         data: {'zipcode': zipcode },
         type: 'json',
-        success: function(){
-          console.log("this is the response:");
-          $(".passover-date").empty().append("<p class='date'>" + response + "</p>")
+        success: function(response){
+          console.log("this is the response:" + response);
+          $(".passover-date").empty().append("<span class='date'>" + response["format_date"] + "</span>")
         }
       }).done(function() {
-        $(".passover-date").empty().append("<p class='date'>" + response + "</p>");
+        console.log("done");
       }).fail(function(){
-        $(".passover-date").empty().append("THAT DID NOT WORK");
+        $(".passover-date").empty().append("unknown...try a nearby zipcode");
       });
   });
 

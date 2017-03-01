@@ -24,8 +24,9 @@ describe "User can see next ISS flyover" do
     zipcode = "cats"
 
     fill_in "fetch-passover", with: zipcode
+    find('#zipcode-submit').click
 
-    expect(current_path).to be root_path
-    expect(page).to have_content("your zipcode")
+    expect(current_path).to eq root_path
+    expect(page).to have_content("unknown...try a nearby zipcode")
   end
 end

@@ -18,7 +18,7 @@ class IssService
 
   def date_of_next_passover(latitude, longitude)
     conn = Faraday.new("http://api.open-notify.org")
-    response = conn.get "/iss-pass.json?lat=#{latitude}&lon=#{longitude}&n=1"
+    response = conn.get "/iss-pass.json?lat=#{latitude}&lon=#{longitude}"
     @timestamp = JSON.parse(response.body)["response"][0]["risetime"]
   end
 end
