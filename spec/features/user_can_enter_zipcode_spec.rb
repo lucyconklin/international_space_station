@@ -9,7 +9,7 @@ describe "User can see next ISS flyover" do
     visit root_path
   end
 
-  it "after entering zipcode on homepage" do
+  xit "after entering zipcode on homepage" do
     zipcode = 80120
 
     fill_in "fetch-passover", with: zipcode
