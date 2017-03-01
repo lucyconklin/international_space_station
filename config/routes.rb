@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :date_of_next_passovers
   root to: 'pages#index'
 
   namespace :api do

@@ -15,9 +15,10 @@ class IssService
     coordinates = Geocoder.coordinates(zipcode)
     latitude = coordinates[0].to_i
     longitude = coordinates[1].to_i
+    timezone = Timezone.lookup(latitude, longitude)
     conn = Faraday.new("http://api.open-notify.org")
     response = conn.get "/iss-pass.json?lat=#{latitude}&lon=#{longitude}&n=1"
     timestamp = JSON.parse(response.body)["response"][0]["risetime"]
-    Time.at(timestamp)
+    # DateOfNextPassover.new(timestamp, timezone)
   end
 end
