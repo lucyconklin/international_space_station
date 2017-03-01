@@ -10,9 +10,9 @@ describe "Next Passover time API" do
 
   it 'returns date of next passover' do
     get "/api/v1/pass-time", zipcode: 80120
-    
-    date = response.body
 
-    expect(date).to eq(@date)
+    date = JSON.parse(response.body)
+
+    expect(date["format_date"]).to eq(@date)
   end
 end
