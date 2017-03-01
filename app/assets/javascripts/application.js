@@ -17,8 +17,21 @@
 
 $(document).ready(function(){
 
-  var width = 1280,
-      height = 640;
+  var l = 1280,
+      h = 640;
+
+  console.log(l,h);
+
+  var ratio = l / h;
+
+  console.log(ratio);
+
+  var body = d3.select("body").node().getBoundingClientRect();
+
+  var width = body.width;
+  var height = width / ratio;
+
+  console.log(width,height);
 
   var svg = d3.select("#map").append("svg")
       .attr("width", width)
