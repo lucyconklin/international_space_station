@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_action :get_zipcode
+
   def index
-    @date_of_next_passover = IssService.date_of_next_passover(@zipcode)
   end
 
   private

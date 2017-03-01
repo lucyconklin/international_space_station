@@ -5,12 +5,13 @@
 <div id="enter-zipcode">
 	<form>
 		<h3>Enter your zipcode to find out when you can see the ISS</h3>
-		<input type="text" placeholder="your zipcode">
+		<input type="text" name="fetch-passover" class="fetch-passover" placeholder="your zipcode">
+		<button type="button" class="hidden" id="zipcode-submit">"--"</button>
 	</form>
 </div>
 <div id="next-passover">
 	<h3>Your next chance to view the International Space Station is:
-	<span class="white passover-date"><%= @date_of_next_passover %></span>
+	<span class="white passover-date"></span>
 	</h3>
 </div>
 <div id="send-text">

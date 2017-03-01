@@ -22,10 +22,9 @@ $body-font: 'Raleway', sans-serif;
 // typography
 h1 {
   font-family: $header-font;
-  font-size: 36px;
-  color: $jordy-blue;
+  font-size: 20px;
+  color: white;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -78,8 +77,13 @@ g.boundary {
 }
 
 #header {
-  background-color: #142448;
-  padding: 25px;
+  background-color: $blue-zodiac;
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  text-align: center;
 }
 
 #enter-zipcode {

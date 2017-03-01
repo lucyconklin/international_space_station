@@ -37,13 +37,12 @@ $(document).ready(function(){
     console.log(x,y);
     drawIss([x,y]);
     }).done(function() {
-      console.log("success")
     }).fail(function() {
       console.log("error")
     }).always(function() {
       setTimeout(function() {
         svg.selectAll("circle").remove();
-        getCoordinates()}, 5000);
+        getCoordinates()}, 2000);
     });
   };
 
@@ -60,9 +59,8 @@ $(document).ready(function(){
     	})
     	.attr("r", "8px")
       .transition()
-      .duration(7000)
+      .duration(3000)
       .style("fill-opacity", 0)
-      // .remove()
   };
 
   d3.json("https://gist.githubusercontent.com/abenrob/787723ca91772591b47e/raw/8a7f176072d508218e120773943b595c998991be/world-50m.json", function(error, world) {
@@ -78,6 +76,28 @@ $(document).ready(function(){
         .data([topojson.feature(world, world.objects.countries)])
         .enter().append("path")
         .attr("d", path);
+  });
+
+  $('#zipcode-submit').click('submit', function(event) {
+      event.preventDefault();
+
+      var zipcode = $("input[name=fetch-passover]").val();
+
+      console.log(zipcode);
+      $.ajax({
+        url: "/api/v1/pass-time",
+        method: "GET",
+        data: {'zipcode': zipcode },
+        type: 'json',
+        success: function(){
+          console.log("this is the response:");
+          $(".passover-date").empty().append("<p class='date'>" + response + "</p>")
+        }
+      }).done(function() {
+        $(".passover-date").empty().append("<p class='date'>" + response + "</p>");
+      }).fail(function(){
+        $(".passover-date").empty().append("THAT DID NOT WORK");
+      });
   });
 
   getCoordinates();
