@@ -9,7 +9,7 @@ describe "Next Passover time API" do
   end
 
   it 'returns date of next passover' do
-    get "/api/v1/pass-time", zipcode: 80120
+    get "/api/v1/pass-time", params: { zipcode: 80120 }
 
     date = JSON.parse(response.body)
 
