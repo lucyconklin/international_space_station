@@ -92,26 +92,70 @@ $(document).ready(function(){
   });
 
   $('#zipcode-submit').click('submit', function(event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      var zipcode = $("input[name=fetch-passover]").val();
+    var zipcode = $("input[name=fetch-passover]").val();
 
-      console.log(zipcode);
-      $.ajax({
-        url: "/api/v1/pass-time",
-        method: "GET",
-        data: {'zipcode': zipcode },
-        type: 'json',
-        success: function(response){
-          console.log("this is the response:" + response);
-          $(".passover-date").empty().append("<span class='date'>" + response["format_date"] + "</span>")
-        }
-      }).done(function() {
-        console.log("done");
-      }).fail(function(){
-        $(".passover-date").empty().append("unknown...try a nearby zipcode");
-      });
+    console.log(zipcode);
+    $.ajax({
+      url: "/api/v1/pass-time",
+      method: "GET",
+      data: {'zipcode': zipcode },
+      type: 'json',
+      success: function(response){
+        console.log("this is the response:" + response);
+        $(".passover-date").empty().append("<span class='date'>" + response["format_date"] + "</span>")
+      }
+    }).done(function() {
+      console.log("done");
+    }).fail(function(){
+      $(".passover-date").empty().append("unknown...try a nearby zipcode");
+    });
+    $('#next-passover').removeClass("hidden");
+    $('#send-text').removeClass("hidden").delay(4000);
+    window.scrollBy(0,200);
   });
+
+  $('#phone-number-submit').click('submit', function(event) {
+    var phoneNumber = $("input[name=phone-number]").val();
+    var time = $('span.date').text();
+    var timestamp = ( new Date(time) ) / 1000;
+    reminderTime = timeConverter(timestamp);
+
+    console.log(reminderTime);
+
+    data = { 'timestamp': timestamp, 'phone_number': phoneNumber };
+
+    $.ajax({
+      url: '/api/v1/reminders',
+      method: 'post',
+      data: { 'reminder': data },
+      type: 'json',
+      success: function(response){
+
+      }
+    }).done(function() {
+      console.log('DONE');
+      $('#text-confirmation').removeClass("hidden");
+      $('.reminder-info').append(reminderTime);
+    }).fail(function() {
+      console.log('FAILED');
+    });
+
+
+  });
+
+  function timeConverter(unixTimestamp){
+    var a = new Date(unixTimestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min;
+    return time;
+  };
 
   getCoordinates();
 

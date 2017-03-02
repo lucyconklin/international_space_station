@@ -10,26 +10,26 @@
 	<form>
 		<h3>Enter your zipcode to find out when you can see the ISS</h3>
 		<input type="text" name="fetch-passover" class="fetch-passover" placeholder="your zipcode">
-		<button type="button" class="hidden" id="zipcode-submit">submit</button>
+		<button type="button" id="zipcode-submit">submit</button>
 	</form>
 </div>
-<div id="next-passover">
+<div id="next-passover" class="hidden">
 	<h3>Your next chance to view the International Space Station is:
 	<span class="white passover-date"></span>
 	</h3>
 </div>
-<div id="send-text">
+<div id="send-text" class="hidden">
 	<form class="text-form">
 		<h3>Enter your phone number to receive a text</h3>
-		<input placeholder="your phone number" class="phone-number" type="text">
-		<button type="button" class="hidden" id="phone-number-submit">submit</button>
+		<input placeholder="your phone number" name="phone-number" class="phone-number" type="text">
+		<button type="button" id="phone-number-submit">submit</button>
 	</form>
 </div>
-<div id="text-confirmation">
+<div id="text-confirmation" class="hidden">
 	<h3>Your reminder is scheduled for:
 		<span class="white reminder-info"></span>
 	</h3>
 </div>
 <section class="footer">
-	<p>&copy; 2017 Lucy Conklin</p>
+	<p>made in 2017 by <a href="http://lucyconklin.com" target="blank">Lucy Conklin</a></p>
 </section>

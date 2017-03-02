@@ -12,7 +12,7 @@ $header-font: 'Raleway', sans-serif;
 $body-font: 'Raleway', sans-serif;
 
 .white {
-  color: white;
+  color: $kepple;
   font-weight: 500;
 }
 
@@ -58,6 +58,17 @@ section.footer p {
   font-family: $body-font;
   font-size: 14px;
   text-align: center;
+}
+
+section.footer p a {
+  text-decoration: none;
+  color: $jordy-blue;
+}
+
+section.footer p a:hover {
+  text-decoration: none;
+  color: $dandelion;
+  border-bottom: 1px solid $dandelion;
 }
 // frame
 body {
@@ -181,4 +192,8 @@ button:hover {
   text-decoration: none;
   color: $kepple;
   border-color: $kepple;
+}
+
+.hidden {
+  display: none;
 }
