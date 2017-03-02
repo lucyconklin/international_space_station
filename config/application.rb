@@ -8,8 +8,10 @@ Bundler.require(*Rails.groups)
 
 module InternationalSpaceStation
   class Application < Rails::Application
-    Timezone::Lookup.config(:google) do |c|
-      c.api_key = ENV['GOOGLE_MAPS_TIME_ZONE_API_KEY']
+    if ENV['GOOGLE_MAPS_TIME_ZONE_API_KEY']
+      Timezone::Lookup.config(:google) do |c|
+        c.api_key = ENV['GOOGLE_MAPS_TIME_ZONE_API_KEY']
+      end
     end
   end
 end

@@ -19,6 +19,8 @@ gem 'timezone'
 gem 'active_model_serializers'
 gem 'figaro'
 gem 'twilio-ruby'
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'

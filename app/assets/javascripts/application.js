@@ -112,8 +112,8 @@ $(document).ready(function(){
       $(".passover-date").empty().append("unknown...try a nearby zipcode");
     });
     $('#next-passover').removeClass("hidden");
-    $('#send-text').removeClass("hidden").delay(4000);
-    window.scrollBy(0,200);
+    $('#send-text').removeClass("hidden").delay(6000);
+    window.scrollBy(0,100);
   });
 
   $('#phone-number-submit').click('submit', function(event) {
