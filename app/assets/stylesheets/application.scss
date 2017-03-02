@@ -13,6 +13,7 @@ $body-font: 'Raleway', sans-serif;
 
 .white {
   color: white;
+  font-weight: 500;
 }
 
 .dandelion {
@@ -44,6 +45,11 @@ h3 {
 }
 
 #next-passover h3 {
+  color: $jordy-blue;
+  display: inline-block;
+}
+
+#text-confirmation h3 {
   color: $jordy-blue;
   display: inline-block;
 }
@@ -86,18 +92,13 @@ g.boundary {
   text-align: center;
 }
 
-#enter-zipcode {
+#enter-zipcode, #send-text {
   background-color: dogerblue;
   padding: 25px;
 }
 
-#next-passover {
+#next-passover, #text-confirmation {
   background-color: $big-stone;
-  padding: 25px;
-}
-
-#send-text {
-  background-color: dogerblue;
   padding: 25px;
 }
 
@@ -161,4 +162,23 @@ circle {
   z-index: 999;
   transform-origin: 8px 8px;
   -webkit-transform-origin: 50% 50%;
+}
+
+button {
+  font-family: $header-font;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 0;
+  border: 2px solid $chetwode-blue;
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0);
+  color: $chetwode-blue;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+button:hover {
+  text-decoration: none;
+  color: $kepple;
+  border-color: $kepple;
 }
