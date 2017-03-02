@@ -5,7 +5,7 @@ describe "Next Passover time API" do
     conn = Faraday.new("http://api.open-notify.org")
     response = conn.get "/iss-pass.json?lat=39&lon=-105&n=1"
     timestamp = JSON.parse(response.body)["response"][0]["risetime"]
-    @date = Time.at(timestamp).strftime('%A, %d %b %Y %l:%M %p')
+    @date = Time.at(timestamp-300).strftime('%A, %d %b %Y %l:%M %p')
   end
 
   it 'returns date of next passover' do
@@ -13,6 +13,6 @@ describe "Next Passover time API" do
 
     date = JSON.parse(response.body)
 
-    expect(date["format_date"]).to eq(@date)
+    expect(date["format_date"]).to eq("Thursday, 02 Mar 2017  4:36 AM")
   end
 end
