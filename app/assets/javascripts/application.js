@@ -141,7 +141,7 @@ $(document).ready(function(){
     }).fail(function() {
       console.log('FAILED');
     });
-
+    window.scrollBy(0,100);
 
   });
 
