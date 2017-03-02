@@ -120,7 +120,7 @@ $(document).ready(function(){
     var phoneNumber = $("input[name=phone-number]").val();
     var time = $('span.date').text();
     var timestamp = ( new Date(time) ) / 1000;
-    reminderTime = timeConverter(timestamp);
+    reminderTime = timeConverter(timestamp - 300);
 
     console.log(reminderTime);
 
