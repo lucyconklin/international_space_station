@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Fetch Pass Time PORO" do
   it "initializes with zipcode" do
-    zipcode = 80120
+    zipcode = 80210
 
     pass_time = FetchPassTime.new(zipcode)
 
