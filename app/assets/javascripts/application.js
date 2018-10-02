@@ -104,7 +104,9 @@ $(document).ready(function(){
       type: 'json',
       success: function(response){
         console.log("this is the response:" + response);
-        $(".passover-date").empty().append("<span class='date'>" + response["format_date"] + "</span>")
+        $(".passover-date").empty().append("<span class='date'>" + response["format_date"] + "</span>");
+        $('#send-text').removeClass("hidden").delay(6000);
+        window.scrollBy(0,100);
       }
     }).done(function() {
       console.log("done");
@@ -112,8 +114,7 @@ $(document).ready(function(){
       $(".passover-date").empty().append("unknown...try a nearby zipcode");
     });
     $('#next-passover').removeClass("hidden");
-    $('#send-text').removeClass("hidden").delay(6000);
-    window.scrollBy(0,100);
+
   });
 
   $('#phone-number-submit').click('submit', function(event) {

@@ -1,7 +1,7 @@
 class IssService
   attr_reader :timestamp
 
-  def initialize()
+  def initialize
   end
 
   def get_current_position
@@ -21,4 +21,8 @@ class IssService
     response = conn.get "/iss-pass.json?lat=#{latitude}&lon=#{longitude}"
     @timestamp = JSON.parse(response.body)["response"][0]["risetime"]
   end
+
+  # private
+  #   def conn
+  #     Faraday.new...
 end
